@@ -84,7 +84,7 @@ function App() {
 						{/* Routes only for non-authenticated users */}
 						<Route
 							element={
-								<ProtectRoute token={!token} redirect="/" />
+								<ProtectRoute token={!Boolean(token)} redirect="/" />
 							}
 						>
 							<Route path="/login" element={<Login />} />
